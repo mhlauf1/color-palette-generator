@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { ColorGenerator, ColorUtils } from "@/utils/colorUtils";
-import { ColorPalette, WebsiteVibe } from "@/utils/types";
+import { ColorPalette, WebsiteVibe, Preferences } from "@/utils/types";
 import InputHandler from "./InputHandler";
 import ColorResults from "./ColorResults";
 
@@ -37,9 +37,9 @@ const SHADES_COUNT = 9;
 const ColorPaletteGenerator = () => {
   const [baseColor, setBaseColor] = useState("#EB652B");
   const [colorInput, setColorInput] = useState("#EB652B");
-  const [preferences, setPreferences] = useState({
-    harmony: "analogous" as const,
-    intensity: "light" as const,
+  const [preferences, setPreferences] = useState<Preferences>({
+    harmony: "analogous",
+    intensity: "light",
     minContrast: 4.5,
     vibe: WEBSITE_VIBES[0],
   });

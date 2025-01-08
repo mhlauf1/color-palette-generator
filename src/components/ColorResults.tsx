@@ -6,7 +6,7 @@ import ColorRandomizer from "./ColorRandomizer";
 interface ColorResultsProps {
   palette: ColorPalette | null;
   shades: string[];
-  handleRandomize: any;
+  handleRandomize: () => void;
 }
 
 const ColorResults = ({

@@ -1,12 +1,12 @@
 import React from "react";
-import { WebsiteVibe } from "@/utils/types";
+import { Preferences, WebsiteVibe } from "@/utils/types";
 
 interface InputHandlerProps {
   colorInput: string;
-  handleColorInputChange: any;
-  handleHexInputChange: any;
-  preferences: any;
-  setPreferences: any;
+  handleColorInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleHexInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  preferences: Preferences;
+  setPreferences: React.Dispatch<React.SetStateAction<Preferences>>;
   WEBSITE_VIBES: WebsiteVibe[];
 }
 
